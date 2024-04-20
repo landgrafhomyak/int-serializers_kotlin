@@ -550,13 +550,18 @@ object IntSerializers {
     }
 
     @JvmStatic
+    fun decode8Bu(src: ByteArray, offset: Int): UByte {
+        return src[offset].toUByte()
+    }
+
+    @JvmStatic
     fun decode8H(src: ByteArray, offset: Int): Short {
         return src[offset].toShort()
     }
 
     @JvmStatic
-    fun decode8Hu(src: ByteArray, offset: Int): Short {
-        return (src[offset].toInt() and 0xFF).toShort()
+    fun decode8Hu(src: ByteArray, offset: Int): UShort {
+        return (src[offset].toInt() and 0xFF).toUShort()
     }
 
     @JvmStatic
@@ -565,8 +570,8 @@ object IntSerializers {
     }
 
     @JvmStatic
-    fun decode8Iu(src: ByteArray, offset: Int): Int {
-        return src[offset].toInt() and 0xFF
+    fun decode8Iu(src: ByteArray, offset: Int): UInt {
+        return (src[offset].toInt() and 0xFF).toUInt()
     }
 
     @JvmStatic
@@ -575,8 +580,8 @@ object IntSerializers {
     }
 
     @JvmStatic
-    fun decode8Lu(src: ByteArray, offset: Int): Long {
-        return src[offset].toLong() and 0xFFL
+    fun decode8Lu(src: ByteArray, offset: Int): ULong {
+        return (src[offset].toLong() and 0xFFL).toULong()
     }
 
     @JvmStatic
@@ -600,13 +605,13 @@ object IntSerializers {
     }
 
     @JvmStatic
-    fun decode16leIu(src: ByteArray, offset: Int): Int {
-        return ((src[offset + 1].toInt() and 0xFF) shl 8) or (src[offset].toInt() and 0xFF)
+    fun decode16leIu(src: ByteArray, offset: Int): UInt {
+        return (((src[offset + 1].toInt() and 0xFF) shl 8) or (src[offset].toInt() and 0xFF)).toUInt()
     }
 
     @JvmStatic
-    fun decode16beIu(src: ByteArray, offset: Int): Int {
-        return ((src[offset].toInt() and 0xFF) shl 8) or (src[offset + 1].toInt() and 0xFF)
+    fun decode16beIu(src: ByteArray, offset: Int): UInt {
+        return (((src[offset].toInt() and 0xFF) shl 8) or (src[offset + 1].toInt() and 0xFF)).toUInt()
     }
 
     @JvmStatic
@@ -620,13 +625,13 @@ object IntSerializers {
     }
 
     @JvmStatic
-    fun decode16leLu(src: ByteArray, offset: Int): Long {
-        return ((src[offset + 1].toLong() and 0xFFL) shl 8) or (src[offset].toLong() and 0xFFL)
+    fun decode16leLu(src: ByteArray, offset: Int): ULong {
+        return (((src[offset + 1].toLong() and 0xFFL) shl 8) or (src[offset].toLong() and 0xFFL)).toULong()
     }
 
     @JvmStatic
-    fun decode16beLu(src: ByteArray, offset: Int): Long {
-        return ((src[offset].toLong() and 0xFFL) shl 8) or (src[offset + 1].toLong() and 0xFFL)
+    fun decode16beLu(src: ByteArray, offset: Int): ULong {
+        return (((src[offset].toLong() and 0xFFL) shl 8) or (src[offset + 1].toLong() and 0xFFL)).toULong()
     }
 
     @JvmStatic
@@ -646,19 +651,19 @@ object IntSerializers {
     }
 
     @JvmStatic
-    fun decode24leIu(src: ByteArray, offset: Int): Int {
+    fun decode24leIu(src: ByteArray, offset: Int): UInt {
         var offset = offset
         var result = src[offset].toInt() and 0xFF
         result = result or (src[++offset].toInt() and 0xFF shl 8)
-        return result or (src[++offset].toInt() and 0xFF shl 16)
+        return (result or (src[++offset].toInt() and 0xFF shl 16)).toUInt()
     }
 
     @JvmStatic
-    fun decode24beIu(src: ByteArray, offset: Int): Int {
+    fun decode24beIu(src: ByteArray, offset: Int): UInt {
         var offset = offset
         var result = src[offset].toInt() and 0xFF shl 16
         result = result or (src[++offset].toInt() and 0xFF shl 8)
-        return result or (src[++offset].toInt() and 0xFF)
+        return (result or (src[++offset].toInt() and 0xFF)).toUInt()
     }
 
     @JvmStatic
@@ -678,19 +683,19 @@ object IntSerializers {
     }
 
     @JvmStatic
-    fun decode24leLu(src: ByteArray, offset: Int): Long {
+    fun decode24leLu(src: ByteArray, offset: Int): ULong {
         var offset = offset
         var result = src[offset].toLong() and 0xFFL
         result = result or (src[++offset].toLong() and 0xFFL shl 8)
-        return result or (src[++offset].toLong() and 0xFFL shl 16)
+        return (result or (src[++offset].toLong() and 0xFFL shl 16)).toULong()
     }
 
     @JvmStatic
-    fun decode24beLu(src: ByteArray, offset: Int): Long {
+    fun decode24beLu(src: ByteArray, offset: Int): ULong {
         var offset = offset
         var result = src[offset].toLong() and 0xFFL shl 16
         result = result or (src[++offset].toLong() and 0xFFL shl 8)
-        return result or (src[++offset].toLong() and 0xFFL)
+        return (result or (src[++offset].toLong() and 0xFFL)).toULong()
     }
 
     @JvmStatic
@@ -730,21 +735,21 @@ object IntSerializers {
     }
 
     @JvmStatic
-    fun decode32leLu(src: ByteArray, offset: Int): Long {
+    fun decode32leLu(src: ByteArray, offset: Int): ULong {
         var offset = offset
         var result = src[offset].toLong() and 0xFFL
         result = result or (src[++offset].toLong() and 0xFFL shl 8)
         result = result or (src[++offset].toLong() and 0xFFL shl 16)
-        return result or (src[++offset].toLong() and 0xFFL shl 24)
+        return (result or (src[++offset].toLong() and 0xFFL shl 24)).toULong()
     }
 
     @JvmStatic
-    fun decode32beLu(src: ByteArray, offset: Int): Long {
+    fun decode32beLu(src: ByteArray, offset: Int): ULong {
         var offset = offset
         var result = src[offset].toLong() and 0xFFL shl 24
         result = result or (src[++offset].toLong() and 0xFFL shl 16)
         result = result or (src[++offset].toLong() and 0xFFL shl 8)
-        return result or (src[++offset].toLong() and 0xFFL)
+        return (result or (src[++offset].toLong() and 0xFFL)).toULong()
     }
 
     @JvmStatic
