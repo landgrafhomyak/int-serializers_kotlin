@@ -8,119 +8,119 @@ import kotlin.jvm.JvmStatic
 object IntSerializers {
     @JvmName("encode8B")
     @JvmStatic
-    fun encode8B(dst: ByteArray, value: Byte, offset: Int): ByteArray {
+    fun encode8B(dst: ByteArray, offset: Int, value: Byte): ByteArray {
         dst[offset] = value
         return dst
     }
 
     @JvmName("encode8B\$ua")
     @JvmStatic
-    fun encode8B(dst: UByteArray, value: Byte, offset: Int): UByteArray {
+    fun encode8B(dst: UByteArray, offset: Int, value: Byte): UByteArray {
         dst[offset] = value.toUByte()
         return dst
     }
 
     @JvmName("encode8Bu")
     @JvmStatic
-    fun encode8Bu(dst: ByteArray, value: UByte, offset: Int): ByteArray {
+    fun encode8Bu(dst: ByteArray, offset: Int, value: UByte): ByteArray {
         dst[offset] = value.toByte()
         return dst
     }
 
     @JvmName("encode8Bu\$ua")
     @JvmStatic
-    fun encode8Bu(dst: UByteArray, value: UByte, offset: Int): UByteArray {
+    fun encode8Bu(dst: UByteArray, offset: Int, value: UByte): UByteArray {
         dst[offset] = value
         return dst
     }
 
     @JvmName("encode8H")
     @JvmStatic
-    fun encode8H(dst: ByteArray, value: Short, offset: Int): ByteArray {
+    fun encode8H(dst: ByteArray, offset: Int, value: Short): ByteArray {
         dst[offset] = value.toByte()
         return dst
     }
 
     @JvmName("encode8H\$ua")
     @JvmStatic
-    fun encode8H(dst: UByteArray, value: Short, offset: Int): UByteArray {
+    fun encode8H(dst: UByteArray, offset: Int, value: Short): UByteArray {
         dst[offset] = value.toUByte()
         return dst
     }
 
     @JvmName("encode8Hu")
     @JvmStatic
-    fun encode8Hu(dst: ByteArray, value: UShort, offset: Int): ByteArray {
+    fun encode8Hu(dst: ByteArray, offset: Int, value: UShort): ByteArray {
         dst[offset] = value.toByte()
         return dst
     }
 
     @JvmName("encode8Hu\$ua")
     @JvmStatic
-    fun encode8Hu(dst: UByteArray, value: UShort, offset: Int): UByteArray {
+    fun encode8Hu(dst: UByteArray, offset: Int, value: UShort): UByteArray {
         dst[offset] = value.toUByte()
         return dst
     }
 
     @JvmName("encode8I")
     @JvmStatic
-    fun encode8I(dst: ByteArray, value: Int, offset: Int): ByteArray {
+    fun encode8I(dst: ByteArray, offset: Int, value: Int): ByteArray {
         dst[offset] = value.toByte()
         return dst
     }
 
     @JvmName("encode8I\$ua")
     @JvmStatic
-    fun encode8I(dst: UByteArray, value: Int, offset: Int): UByteArray {
+    fun encode8I(dst: UByteArray, offset: Int, value: Int): UByteArray {
         dst[offset] = value.toUByte()
         return dst
     }
 
     @JvmName("encode8Iu")
     @JvmStatic
-    fun encode8Iu(dst: ByteArray, value: UInt, offset: Int): ByteArray {
+    fun encode8Iu(dst: ByteArray, offset: Int, value: UInt): ByteArray {
         dst[offset] = value.toByte()
         return dst
     }
 
     @JvmName("encode8Iu\$ua")
     @JvmStatic
-    fun encode8Iu(dst: UByteArray, value: UInt, offset: Int): UByteArray {
+    fun encode8Iu(dst: UByteArray, offset: Int, value: UInt): UByteArray {
         dst[offset] = value.toUByte()
         return dst
     }
 
     @JvmName("encode8L")
     @JvmStatic
-    fun encode8L(dst: ByteArray, value: Long, offset: Int): ByteArray {
+    fun encode8L(dst: ByteArray, offset: Int, value: Long): ByteArray {
         dst[offset] = value.toByte()
         return dst
     }
 
     @JvmName("encode8L\$ua")
     @JvmStatic
-    fun encode8L(dst: UByteArray, value: Long, offset: Int): UByteArray {
+    fun encode8L(dst: UByteArray, offset: Int, value: Long): UByteArray {
         dst[offset] = value.toUByte()
         return dst
     }
 
     @JvmName("encode8Lu")
     @JvmStatic
-    fun encode8Lu(dst: ByteArray, value: ULong, offset: Int): ByteArray {
+    fun encode8Lu(dst: ByteArray, offset: Int, value: ULong): ByteArray {
         dst[offset] = value.toByte()
         return dst
     }
 
     @JvmName("encode8Lu\$ua")
     @JvmStatic
-    fun encode8Lu(dst: UByteArray, value: ULong, offset: Int): UByteArray {
+    fun encode8Lu(dst: UByteArray, offset: Int, value: ULong): UByteArray {
         dst[offset] = value.toUByte()
         return dst
     }
 
     @JvmName("encode16leB")
     @JvmStatic
-    fun encode16leB(dst: ByteArray, value: Byte, offset: Int): ByteArray {
+    fun encode16leB(dst: ByteArray, offset: Int, value: Byte): ByteArray {
         var offset = offset
         dst[offset] = value
         dst[++offset] = (if (value < 0) 0xFF else 0x0).toByte()
@@ -129,12 +129,12 @@ object IntSerializers {
 
     @JvmName("encode16leB\$ua")
     @JvmStatic
-    fun encode16leB(dst: UByteArray, value: Byte, offset: Int): UByteArray =
-        this.encode16leB(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16leB(dst: UByteArray, offset: Int, value: Byte): UByteArray =
+        this.encode16leB(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16beB")
     @JvmStatic
-    fun encode16beB(dst: ByteArray, value: Byte, offset: Int): ByteArray {
+    fun encode16beB(dst: ByteArray, offset: Int, value: Byte): ByteArray {
         var offset = offset
         dst[offset] = (if (value < 0) 0xFF else 0x0).toByte()
         dst[++offset] = value
@@ -143,12 +143,12 @@ object IntSerializers {
 
     @JvmName("encode16beB\$ua")
     @JvmStatic
-    fun encode16beB(dst: UByteArray, value: Byte, offset: Int): UByteArray =
-        this.encode16beB(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16beB(dst: UByteArray, offset: Int, value: Byte): UByteArray =
+        this.encode16beB(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16leBu")
     @JvmStatic
-    fun encode16leBu(dst: ByteArray, value: UByte, offset: Int): ByteArray {
+    fun encode16leBu(dst: ByteArray, offset: Int, value: UByte): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = 0
@@ -157,12 +157,12 @@ object IntSerializers {
 
     @JvmName("encode16leBu\$ua")
     @JvmStatic
-    fun encode16leBu(dst: UByteArray, value: UByte, offset: Int): UByteArray =
-        this.encode16leBu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16leBu(dst: UByteArray, offset: Int, value: UByte): UByteArray =
+        this.encode16leBu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16beBu")
     @JvmStatic
-    fun encode16beBu(dst: ByteArray, value: UByte, offset: Int): ByteArray {
+    fun encode16beBu(dst: ByteArray, offset: Int, value: UByte): ByteArray {
         var offset = offset
         dst[offset] = 0
         dst[++offset] = value.toByte()
@@ -171,12 +171,12 @@ object IntSerializers {
 
     @JvmName("encode16beBu\$ua")
     @JvmStatic
-    fun encode16beBu(dst: UByteArray, value: UByte, offset: Int): UByteArray =
-        this.encode16beBu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16beBu(dst: UByteArray, offset: Int, value: UByte): UByteArray =
+        this.encode16beBu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16leH")
     @JvmStatic
-    fun encode16leH(dst: ByteArray, value: Short, offset: Int): ByteArray {
+    fun encode16leH(dst: ByteArray, offset: Int, value: Short): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value.toInt() ushr 8).toByte()
@@ -185,12 +185,12 @@ object IntSerializers {
 
     @JvmName("encode16leH\$ua")
     @JvmStatic
-    fun encode16leH(dst: UByteArray, value: Short, offset: Int): UByteArray =
-        this.encode16leH(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16leH(dst: UByteArray, offset: Int, value: Short): UByteArray =
+        this.encode16leH(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16beH")
     @JvmStatic
-    fun encode16beH(dst: ByteArray, value: Short, offset: Int): ByteArray {
+    fun encode16beH(dst: ByteArray, offset: Int, value: Short): ByteArray {
         var offset = offset
         dst[offset] = (value.toInt() ushr 8).toByte()
         dst[++offset] = value.toByte()
@@ -199,12 +199,12 @@ object IntSerializers {
 
     @JvmName("encode16beH\$ua")
     @JvmStatic
-    fun encode16beH(dst: UByteArray, value: Short, offset: Int): UByteArray =
-        this.encode16beH(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16beH(dst: UByteArray, offset: Int, value: Short): UByteArray =
+        this.encode16beH(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16leHu")
     @JvmStatic
-    fun encode16leHu(dst: ByteArray, value: UShort, offset: Int): ByteArray {
+    fun encode16leHu(dst: ByteArray, offset: Int, value: UShort): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value.toShort().toInt() ushr 8).toByte()
@@ -213,12 +213,12 @@ object IntSerializers {
 
     @JvmName("encode16leHu\$ua")
     @JvmStatic
-    fun encode16leHu(dst: UByteArray, value: UShort, offset: Int): UByteArray =
-        this.encode16leHu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16leHu(dst: UByteArray, offset: Int, value: UShort): UByteArray =
+        this.encode16leHu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16beHu")
     @JvmStatic
-    fun encode16beHu(dst: ByteArray, value: UShort, offset: Int): ByteArray {
+    fun encode16beHu(dst: ByteArray, offset: Int, value: UShort): ByteArray {
         var offset = offset
         dst[offset] = (value.toShort().toInt() ushr 8).toByte()
         dst[++offset] = value.toByte()
@@ -227,12 +227,12 @@ object IntSerializers {
 
     @JvmName("encode16beHu\$ua")
     @JvmStatic
-    fun encode16beHu(dst: UByteArray, value: UShort, offset: Int): UByteArray =
-        this.encode16beHu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16beHu(dst: UByteArray, offset: Int, value: UShort): UByteArray =
+        this.encode16beHu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16leI")
     @JvmStatic
-    fun encode16leI(dst: ByteArray, value: Int, offset: Int): ByteArray {
+    fun encode16leI(dst: ByteArray, offset: Int, value: Int): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value ushr 8).toByte()
@@ -241,12 +241,12 @@ object IntSerializers {
 
     @JvmName("encode16leI\$ua")
     @JvmStatic
-    fun encode16leI(dst: UByteArray, value: Int, offset: Int): UByteArray =
-        this.encode16leI(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16leI(dst: UByteArray, offset: Int, value: Int): UByteArray =
+        this.encode16leI(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16beI")
     @JvmStatic
-    fun encode16beI(dst: ByteArray, value: Int, offset: Int): ByteArray {
+    fun encode16beI(dst: ByteArray, offset: Int, value: Int): ByteArray {
         var offset = offset
         dst[offset] = (value ushr 8).toByte()
         dst[++offset] = value.toByte()
@@ -255,12 +255,12 @@ object IntSerializers {
 
     @JvmName("encode16beI\$ua")
     @JvmStatic
-    fun encode16beI(dst: UByteArray, value: Int, offset: Int): UByteArray =
-        this.encode16beI(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16beI(dst: UByteArray, offset: Int, value: Int): UByteArray =
+        this.encode16beI(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16leIu")
     @JvmStatic
-    fun encode16leIu(dst: ByteArray, value: UInt, offset: Int): ByteArray {
+    fun encode16leIu(dst: ByteArray, offset: Int, value: UInt): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value shr 8).toByte()
@@ -269,12 +269,12 @@ object IntSerializers {
 
     @JvmName("encode16leIu\$ua")
     @JvmStatic
-    fun encode16leIu(dst: UByteArray, value: UInt, offset: Int): UByteArray =
-        this.encode16leIu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16leIu(dst: UByteArray, offset: Int, value: UInt): UByteArray =
+        this.encode16leIu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16beIu")
     @JvmStatic
-    fun encode16beIu(dst: ByteArray, value: UInt, offset: Int): ByteArray {
+    fun encode16beIu(dst: ByteArray, offset: Int, value: UInt): ByteArray {
         var offset = offset
         dst[offset] = (value shr 8).toByte()
         dst[++offset] = value.toByte()
@@ -283,12 +283,12 @@ object IntSerializers {
 
     @JvmName("encode16beIu\$ua")
     @JvmStatic
-    fun encode16beIu(dst: UByteArray, value: UInt, offset: Int): UByteArray =
-        this.encode16beIu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16beIu(dst: UByteArray, offset: Int, value: UInt): UByteArray =
+        this.encode16beIu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16leL")
     @JvmStatic
-    fun encode16leL(dst: ByteArray, value: Long, offset: Int): ByteArray {
+    fun encode16leL(dst: ByteArray, offset: Int, value: Long): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value ushr 8).toByte()
@@ -297,12 +297,12 @@ object IntSerializers {
 
     @JvmName("encode16leL\$ua")
     @JvmStatic
-    fun encode16leL(dst: UByteArray, value: Long, offset: Int): UByteArray =
-        this.encode16leL(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16leL(dst: UByteArray, offset: Int, value: Long): UByteArray =
+        this.encode16leL(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16beL")
     @JvmStatic
-    fun encode16beL(dst: ByteArray, value: Long, offset: Int): ByteArray {
+    fun encode16beL(dst: ByteArray, offset: Int, value: Long): ByteArray {
         var offset = offset
         dst[offset] = (value ushr 8).toByte()
         dst[++offset] = value.toByte()
@@ -311,12 +311,12 @@ object IntSerializers {
 
     @JvmName("encode16beL\$ua")
     @JvmStatic
-    fun encode16beL(dst: UByteArray, value: Long, offset: Int): UByteArray =
-        this.encode16leL(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16beL(dst: UByteArray, offset: Int, value: Long): UByteArray =
+        this.encode16leL(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16leLu")
     @JvmStatic
-    fun encode16leLu(dst: ByteArray, value: ULong, offset: Int): ByteArray {
+    fun encode16leLu(dst: ByteArray, offset: Int, value: ULong): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value shr 8).toByte()
@@ -325,12 +325,12 @@ object IntSerializers {
 
     @JvmName("encode16leLu\$ua")
     @JvmStatic
-    fun encode16leLu(dst: UByteArray, value: ULong, offset: Int): UByteArray =
-        this.encode16leLu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16leLu(dst: UByteArray, offset: Int, value: ULong): UByteArray =
+        this.encode16leLu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode16beLu")
     @JvmStatic
-    fun encode16beLu(dst: ByteArray, value: ULong, offset: Int): ByteArray {
+    fun encode16beLu(dst: ByteArray, offset: Int, value: ULong): ByteArray {
         var offset = offset
         dst[offset] = (value shr 8).toByte()
         dst[++offset] = value.toByte()
@@ -339,12 +339,12 @@ object IntSerializers {
 
     @JvmName("encode16beLu\$ua")
     @JvmStatic
-    fun encode16beLu(dst: UByteArray, value: ULong, offset: Int): UByteArray =
-        this.encode16leLu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode16beLu(dst: UByteArray, offset: Int, value: ULong): UByteArray =
+        this.encode16leLu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24leB")
     @JvmStatic
-    fun encode24leB(dst: ByteArray, value: Byte, offset: Int): ByteArray {
+    fun encode24leB(dst: ByteArray, offset: Int, value: Byte): ByteArray {
         var offset = offset
         dst[offset] = value
         dst[++offset] = 0
@@ -354,12 +354,12 @@ object IntSerializers {
 
     @JvmName("encode24leB\$ua")
     @JvmStatic
-    fun encode24leB(dst: UByteArray, value: Byte, offset: Int): UByteArray =
-        this.encode24leB(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24leB(dst: UByteArray, offset: Int, value: Byte): UByteArray =
+        this.encode24leB(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24beB")
     @JvmStatic
-    fun encode24beB(dst: ByteArray, value: Byte, offset: Int): ByteArray {
+    fun encode24beB(dst: ByteArray, offset: Int, value: Byte): ByteArray {
         var offset = offset
         val sign = (if (value < 0) 0xFF else 0).toByte()
         dst[offset] = sign
@@ -370,12 +370,12 @@ object IntSerializers {
 
     @JvmName("encode24beB\$ua")
     @JvmStatic
-    fun encode24beB(dst: UByteArray, value: Byte, offset: Int): UByteArray =
-        this.encode24beB(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24beB(dst: UByteArray, offset: Int, value: Byte): UByteArray =
+        this.encode24beB(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24leBu")
     @JvmStatic
-    fun encode24leBu(dst: ByteArray, value: UByte, offset: Int): ByteArray {
+    fun encode24leBu(dst: ByteArray, offset: Int, value: UByte): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = 0
@@ -385,12 +385,12 @@ object IntSerializers {
 
     @JvmName("encode24leBu\$ua")
     @JvmStatic
-    fun encode24leBu(dst: UByteArray, value: UByte, offset: Int): UByteArray =
-        this.encode24leBu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24leBu(dst: UByteArray, offset: Int, value: UByte): UByteArray =
+        this.encode24leBu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24beBu")
     @JvmStatic
-    fun encode24beBu(dst: ByteArray, value: UByte, offset: Int): ByteArray {
+    fun encode24beBu(dst: ByteArray, offset: Int, value: UByte): ByteArray {
         var offset = offset
         dst[offset] = 0
         dst[++offset] = 0
@@ -400,12 +400,12 @@ object IntSerializers {
 
     @JvmName("encode24beBu\$ua")
     @JvmStatic
-    fun encode24beBu(dst: UByteArray, value: UByte, offset: Int): UByteArray =
-        this.encode24beBu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24beBu(dst: UByteArray, offset: Int, value: UByte): UByteArray =
+        this.encode24beBu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24leH")
     @JvmStatic
-    fun encode24leH(dst: ByteArray, value: Short, offset: Int): ByteArray {
+    fun encode24leH(dst: ByteArray, offset: Int, value: Short): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value.toInt() ushr 8).toByte()
@@ -415,12 +415,12 @@ object IntSerializers {
 
     @JvmName("encode24leH\$ua")
     @JvmStatic
-    fun encode24leH(dst: UByteArray, value: Short, offset: Int): UByteArray =
-        this.encode24leH(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24leH(dst: UByteArray, offset: Int, value: Short): UByteArray =
+        this.encode24leH(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24beH")
     @JvmStatic
-    fun encode24beH(dst: ByteArray, value: Short, offset: Int): ByteArray {
+    fun encode24beH(dst: ByteArray, offset: Int, value: Short): ByteArray {
         var offset = offset
         dst[offset] = (value.toInt() ushr 8).toByte()
         dst[++offset] = value.toByte()
@@ -430,12 +430,12 @@ object IntSerializers {
 
     @JvmName("encode24beH\$ua")
     @JvmStatic
-    fun encode24beH(dst: UByteArray, value: Short, offset: Int): UByteArray =
-        this.encode24beH(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24beH(dst: UByteArray, offset: Int, value: Short): UByteArray =
+        this.encode24beH(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24leHu")
     @JvmStatic
-    fun encode24leHu(dst: ByteArray, value: UShort, offset: Int): ByteArray {
+    fun encode24leHu(dst: ByteArray, offset: Int, value: UShort): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value.toShort().toInt() ushr 8).toByte()
@@ -445,12 +445,12 @@ object IntSerializers {
 
     @JvmName("encode24leHu\$ua")
     @JvmStatic
-    fun encode24leHu(dst: UByteArray, value: UShort, offset: Int): UByteArray =
-        this.encode24leHu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24leHu(dst: UByteArray, offset: Int, value: UShort): UByteArray =
+        this.encode24leHu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24beHu")
     @JvmStatic
-    fun encode24beHu(dst: ByteArray, value: UShort, offset: Int): ByteArray {
+    fun encode24beHu(dst: ByteArray, offset: Int, value: UShort): ByteArray {
         var offset = offset
         dst[offset] = (value.toShort().toInt() ushr 8).toByte()
         dst[++offset] = value.toShort().toByte()
@@ -460,12 +460,12 @@ object IntSerializers {
 
     @JvmName("encode24beHu\$ua")
     @JvmStatic
-    fun encode24beHu(dst: UByteArray, value: UShort, offset: Int): UByteArray =
-        this.encode24beHu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24beHu(dst: UByteArray, offset: Int, value: UShort): UByteArray =
+        this.encode24beHu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24leI")
     @JvmStatic
-    fun encode24leI(dst: ByteArray, value: Int, offset: Int): ByteArray {
+    fun encode24leI(dst: ByteArray, offset: Int, value: Int): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value ushr 8).toByte()
@@ -475,12 +475,12 @@ object IntSerializers {
 
     @JvmName("encode24leI\$ua")
     @JvmStatic
-    fun encode24leI(dst: UByteArray, value: Int, offset: Int): UByteArray =
-        this.encode24leI(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24leI(dst: UByteArray, offset: Int, value: Int): UByteArray =
+        this.encode24leI(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24beI")
     @JvmStatic
-    fun encode24beI(dst: ByteArray, value: Int, offset: Int): ByteArray {
+    fun encode24beI(dst: ByteArray, offset: Int, value: Int): ByteArray {
         var offset = offset
         dst[offset] = (value ushr 16).toByte()
         dst[++offset] = (value ushr 8).toByte()
@@ -490,12 +490,12 @@ object IntSerializers {
 
     @JvmName("encode24beI\$ua")
     @JvmStatic
-    fun encode24beI(dst: UByteArray, value: Int, offset: Int): UByteArray =
-        this.encode24beI(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24beI(dst: UByteArray, offset: Int, value: Int): UByteArray =
+        this.encode24beI(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24leIu")
     @JvmStatic
-    fun encode24leIu(dst: ByteArray, value: UInt, offset: Int): ByteArray {
+    fun encode24leIu(dst: ByteArray, offset: Int, value: UInt): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value shr 8).toByte()
@@ -505,12 +505,12 @@ object IntSerializers {
 
     @JvmName("encode24leIu\$ua")
     @JvmStatic
-    fun encode24leIu(dst: UByteArray, value: UInt, offset: Int): UByteArray =
-        this.encode24leIu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24leIu(dst: UByteArray, offset: Int, value: UInt): UByteArray =
+        this.encode24leIu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24beIu")
     @JvmStatic
-    fun encode24beIu(dst: ByteArray, value: UInt, offset: Int): ByteArray {
+    fun encode24beIu(dst: ByteArray, offset: Int, value: UInt): ByteArray {
         var offset = offset
         dst[offset] = (value shr 16).toByte()
         dst[++offset] = (value shr 8).toByte()
@@ -520,12 +520,12 @@ object IntSerializers {
 
     @JvmName("encode24beIu\$ua")
     @JvmStatic
-    fun encode24beIu(dst: UByteArray, value: UInt, offset: Int): UByteArray =
-        this.encode24beIu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24beIu(dst: UByteArray, offset: Int, value: UInt): UByteArray =
+        this.encode24beIu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24leL")
     @JvmStatic
-    fun encode24leL(dst: ByteArray, value: Long, offset: Int): ByteArray {
+    fun encode24leL(dst: ByteArray, offset: Int, value: Long): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value ushr 8).toByte()
@@ -535,12 +535,12 @@ object IntSerializers {
 
     @JvmName("encode24leL\$ua")
     @JvmStatic
-    fun encode24leL(dst: UByteArray, value: Long, offset: Int): UByteArray =
-        this.encode24leL(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24leL(dst: UByteArray, offset: Int, value: Long): UByteArray =
+        this.encode24leL(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24beL")
     @JvmStatic
-    fun encode24beL(dst: ByteArray, value: Long, offset: Int): ByteArray {
+    fun encode24beL(dst: ByteArray, offset: Int, value: Long): ByteArray {
         var offset = offset
         dst[offset] = (value ushr 16).toByte()
         dst[++offset] = (value ushr 8).toByte()
@@ -550,12 +550,12 @@ object IntSerializers {
 
     @JvmName("encode24beL\$ua")
     @JvmStatic
-    fun encode24beL(dst: UByteArray, value: Long, offset: Int): UByteArray =
-        this.encode24beL(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24beL(dst: UByteArray, offset: Int, value: Long): UByteArray =
+        this.encode24beL(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24leLu")
     @JvmStatic
-    fun encode24leLu(dst: ByteArray, value: ULong, offset: Int): ByteArray {
+    fun encode24leLu(dst: ByteArray, offset: Int, value: ULong): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value shr 8).toByte()
@@ -565,12 +565,12 @@ object IntSerializers {
 
     @JvmName("encode24leLu\$ua")
     @JvmStatic
-    fun encode24leLu(dst: UByteArray, value: ULong, offset: Int): UByteArray =
-        this.encode24leLu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24leLu(dst: UByteArray, offset: Int, value: ULong): UByteArray =
+        this.encode24leLu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode24beLu")
     @JvmStatic
-    fun encode24beLu(dst: ByteArray, value: ULong, offset: Int): ByteArray {
+    fun encode24beLu(dst: ByteArray, offset: Int, value: ULong): ByteArray {
         var offset = offset
         dst[offset] = (value shr 16).toByte()
         dst[++offset] = (value shr 8).toByte()
@@ -580,12 +580,12 @@ object IntSerializers {
 
     @JvmName("encode24beLu\$ua")
     @JvmStatic
-    fun encode24beLu(dst: UByteArray, value: ULong, offset: Int): UByteArray =
-        this.encode24beLu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode24beLu(dst: UByteArray, offset: Int, value: ULong): UByteArray =
+        this.encode24beLu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32leB")
     @JvmStatic
-    fun encode32leB(dst: ByteArray, value: Byte, offset: Int): ByteArray {
+    fun encode32leB(dst: ByteArray, offset: Int, value: Byte): ByteArray {
         var offset = offset
         val sign = (if (value < 0) 0xFF else 0x0).toByte()
         dst[offset] = value
@@ -597,12 +597,12 @@ object IntSerializers {
 
     @JvmName("encode32leB\$ua")
     @JvmStatic
-    fun encode32leB(dst: UByteArray, value: Byte, offset: Int): UByteArray =
-        this.encode32leB(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32leB(dst: UByteArray, offset: Int, value: Byte): UByteArray =
+        this.encode32leB(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32beB")
     @JvmStatic
-    fun encode32beB(dst: ByteArray, value: Byte, offset: Int): ByteArray {
+    fun encode32beB(dst: ByteArray, offset: Int, value: Byte): ByteArray {
         var offset = offset
         val sign = (if (value < 0) 0xFF else 0).toByte()
         dst[offset] = sign
@@ -614,12 +614,12 @@ object IntSerializers {
 
     @JvmName("encode32beB\$ua")
     @JvmStatic
-    fun encode32beB(dst: UByteArray, value: Byte, offset: Int): UByteArray =
-        this.encode32beB(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32beB(dst: UByteArray, offset: Int, value: Byte): UByteArray =
+        this.encode32beB(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32leBu")
     @JvmStatic
-    fun encode32leBu(dst: ByteArray, value: UByte, offset: Int): ByteArray {
+    fun encode32leBu(dst: ByteArray, offset: Int, value: UByte): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = 0
@@ -630,12 +630,12 @@ object IntSerializers {
 
     @JvmName("encode32leBu\$ua")
     @JvmStatic
-    fun encode32leBu(dst: UByteArray, value: UByte, offset: Int): UByteArray =
-        this.encode32leBu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32leBu(dst: UByteArray, offset: Int, value: UByte): UByteArray =
+        this.encode32leBu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32beBu")
     @JvmStatic
-    fun encode32beBu(dst: ByteArray, value: UByte, offset: Int): ByteArray {
+    fun encode32beBu(dst: ByteArray, offset: Int, value: UByte): ByteArray {
         var offset = offset
         dst[offset] = 0
         dst[++offset] = 0
@@ -646,12 +646,12 @@ object IntSerializers {
 
     @JvmName("encode32beBu\$ua")
     @JvmStatic
-    fun encode32beBu(dst: UByteArray, value: UByte, offset: Int): UByteArray =
-        this.encode32beBu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32beBu(dst: UByteArray, offset: Int, value: UByte): UByteArray =
+        this.encode32beBu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32leH")
     @JvmStatic
-    fun encode32leH(dst: ByteArray, value: Short, offset: Int): ByteArray {
+    fun encode32leH(dst: ByteArray, offset: Int, value: Short): ByteArray {
         var offset = offset
         val sign = (if (value < 0) 0xFF else 0).toByte()
         dst[offset] = value.toByte()
@@ -663,12 +663,12 @@ object IntSerializers {
 
     @JvmName("encode32leH\$ua")
     @JvmStatic
-    fun encode32leH(dst: UByteArray, value: Short, offset: Int): UByteArray =
-        this.encode32leH(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32leH(dst: UByteArray, offset: Int, value: Short): UByteArray =
+        this.encode32leH(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32beH")
     @JvmStatic
-    fun encode32beH(dst: ByteArray, value: Short, offset: Int): ByteArray {
+    fun encode32beH(dst: ByteArray, offset: Int, value: Short): ByteArray {
         var offset = offset
         val sign = (if (value < 0) 0xFF else 0).toByte()
         dst[offset] = sign
@@ -680,12 +680,12 @@ object IntSerializers {
 
     @JvmName("encode32beH\$ua")
     @JvmStatic
-    fun encode32beH(dst: UByteArray, value: Short, offset: Int): UByteArray =
-        this.encode32beH(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32beH(dst: UByteArray, offset: Int, value: Short): UByteArray =
+        this.encode32beH(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32leHu")
     @JvmStatic
-    fun encode32leHu(dst: ByteArray, value: UShort, offset: Int): ByteArray {
+    fun encode32leHu(dst: ByteArray, offset: Int, value: UShort): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value.toShort().toInt() ushr 8).toByte()
@@ -696,12 +696,12 @@ object IntSerializers {
 
     @JvmName("encode32leHu\$ua")
     @JvmStatic
-    fun encode32leHu(dst: UByteArray, value: UShort, offset: Int): UByteArray =
-        this.encode32leHu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32leHu(dst: UByteArray, offset: Int, value: UShort): UByteArray =
+        this.encode32leHu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32beHu")
     @JvmStatic
-    fun encode32beHu(dst: ByteArray, value: UShort, offset: Int): ByteArray {
+    fun encode32beHu(dst: ByteArray, offset: Int, value: UShort): ByteArray {
         var offset = offset
         dst[offset] = 0
         dst[++offset] = 0
@@ -712,12 +712,12 @@ object IntSerializers {
 
     @JvmName("encode32beHu\$ua")
     @JvmStatic
-    fun encode32beHu(dst: UByteArray, value: UShort, offset: Int): UByteArray =
-        this.encode32beHu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32beHu(dst: UByteArray, offset: Int, value: UShort): UByteArray =
+        this.encode32beHu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32leI")
     @JvmStatic
-    fun encode32leI(dst: ByteArray, value: Int, offset: Int): ByteArray {
+    fun encode32leI(dst: ByteArray, offset: Int, value: Int): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value ushr 8).toByte()
@@ -728,12 +728,12 @@ object IntSerializers {
 
     @JvmName("encode32leI\$ua")
     @JvmStatic
-    fun encode32leI(dst: UByteArray, value: Int, offset: Int): UByteArray =
-        this.encode32leI(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32leI(dst: UByteArray, offset: Int, value: Int): UByteArray =
+        this.encode32leI(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32beI")
     @JvmStatic
-    fun encode32beI(dst: ByteArray, value: Int, offset: Int): ByteArray {
+    fun encode32beI(dst: ByteArray, offset: Int, value: Int): ByteArray {
         var offset = offset
         dst[offset] = (value ushr 24).toByte()
         dst[++offset] = (value ushr 16).toByte()
@@ -744,12 +744,12 @@ object IntSerializers {
 
     @JvmName("encode32beI\$ua")
     @JvmStatic
-    fun encode32beI(dst: UByteArray, value: Int, offset: Int): UByteArray =
-        this.encode32beI(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32beI(dst: UByteArray, offset: Int, value: Int): UByteArray =
+        this.encode32beI(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32leIu")
     @JvmStatic
-    fun encode32leIu(dst: ByteArray, value: UInt, offset: Int): ByteArray {
+    fun encode32leIu(dst: ByteArray, offset: Int, value: UInt): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value shr 8).toByte()
@@ -760,12 +760,12 @@ object IntSerializers {
 
     @JvmName("encode32leIu\$ua")
     @JvmStatic
-    fun encode32leIu(dst: UByteArray, value: UInt, offset: Int): UByteArray =
-        this.encode32leIu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32leIu(dst: UByteArray, offset: Int, value: UInt): UByteArray =
+        this.encode32leIu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32beIu")
     @JvmStatic
-    fun encode32beIu(dst: ByteArray, value: UInt, offset: Int): ByteArray {
+    fun encode32beIu(dst: ByteArray, offset: Int, value: UInt): ByteArray {
         var offset = offset
         dst[offset] = (value shr 24).toByte()
         dst[++offset] = (value shr 16).toByte()
@@ -776,12 +776,12 @@ object IntSerializers {
 
     @JvmName("encode32beIu\$ua")
     @JvmStatic
-    fun encode32beIu(dst: UByteArray, value: UInt, offset: Int): UByteArray =
-        this.encode32beIu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32beIu(dst: UByteArray, offset: Int, value: UInt): UByteArray =
+        this.encode32beIu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32leL")
     @JvmStatic
-    fun encode32leL(dst: ByteArray, value: Long, offset: Int): ByteArray {
+    fun encode32leL(dst: ByteArray, offset: Int, value: Long): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value ushr 8).toByte()
@@ -792,12 +792,12 @@ object IntSerializers {
 
     @JvmName("encode32leL\$ua")
     @JvmStatic
-    fun encode32leL(dst: UByteArray, value: Long, offset: Int): UByteArray =
-        this.encode32leL(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32leL(dst: UByteArray, offset: Int, value: Long): UByteArray =
+        this.encode32leL(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32beL")
     @JvmStatic
-    fun encode32beL(dst: ByteArray, value: Long, offset: Int): ByteArray {
+    fun encode32beL(dst: ByteArray, offset: Int, value: Long): ByteArray {
         var offset = offset
         dst[offset] = (value ushr 24).toByte()
         dst[++offset] = (value ushr 16).toByte()
@@ -808,12 +808,12 @@ object IntSerializers {
 
     @JvmName("encode32beL\$ua")
     @JvmStatic
-    fun encode32beL(dst: UByteArray, value: Long, offset: Int): UByteArray =
-        this.encode32beL(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32beL(dst: UByteArray, offset: Int, value: Long): UByteArray =
+        this.encode32beL(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32leLu")
     @JvmStatic
-    fun encode32leLu(dst: ByteArray, value: ULong, offset: Int): ByteArray {
+    fun encode32leLu(dst: ByteArray, offset: Int, value: ULong): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value shr 8).toByte()
@@ -824,12 +824,12 @@ object IntSerializers {
 
     @JvmName("encode32leLu\$ua")
     @JvmStatic
-    fun encode32leLu(dst: UByteArray, value: ULong, offset: Int): UByteArray =
-        this.encode32leLu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32leLu(dst: UByteArray, offset: Int, value: ULong): UByteArray =
+        this.encode32leLu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode32beLu")
     @JvmStatic
-    fun encode32beLu(dst: ByteArray, value: ULong, offset: Int): ByteArray {
+    fun encode32beLu(dst: ByteArray, offset: Int, value: ULong): ByteArray {
         var offset = offset
         dst[offset] = (value shr 24).toByte()
         dst[++offset] = (value shr 16).toByte()
@@ -840,12 +840,12 @@ object IntSerializers {
 
     @JvmName("encode32beLu\$ua")
     @JvmStatic
-    fun encode32beLu(dst: UByteArray, value: ULong, offset: Int): UByteArray =
-        this.encode32beLu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode32beLu(dst: UByteArray, offset: Int, value: ULong): UByteArray =
+        this.encode32beLu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64leB")
     @JvmStatic
-    fun encode64leB(dst: ByteArray, value: Byte, offset: Int): ByteArray {
+    fun encode64leB(dst: ByteArray, offset: Int, value: Byte): ByteArray {
         var offset = offset
         val sign = (if (value < 0) 0xFF else 0).toByte()
         dst[offset] = value
@@ -861,12 +861,12 @@ object IntSerializers {
 
     @JvmName("encode64leB\$ua")
     @JvmStatic
-    fun encode64leB(dst: UByteArray, value: Byte, offset: Int): UByteArray =
-        this.encode64leB(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64leB(dst: UByteArray, offset: Int, value: Byte): UByteArray =
+        this.encode64leB(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64beB")
     @JvmStatic
-    fun encode64beB(dst: ByteArray, value: Byte, offset: Int): ByteArray {
+    fun encode64beB(dst: ByteArray, offset: Int, value: Byte): ByteArray {
         var offset = offset
         val sign = (if (value < 0) 0xFF else 0).toByte()
         dst[offset] = sign
@@ -882,12 +882,12 @@ object IntSerializers {
 
     @JvmName("encode64beB\$ua")
     @JvmStatic
-    fun encode64beB(dst: UByteArray, value: Byte, offset: Int): UByteArray =
-        this.encode64beB(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64beB(dst: UByteArray, offset: Int, value: Byte): UByteArray =
+        this.encode64beB(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64leBu")
     @JvmStatic
-    fun encode64leBu(dst: ByteArray, value: UByte, offset: Int): ByteArray {
+    fun encode64leBu(dst: ByteArray, offset: Int, value: UByte): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = 0
@@ -902,12 +902,12 @@ object IntSerializers {
 
     @JvmName("encode64leBu\$ua")
     @JvmStatic
-    fun encode64leBu(dst: UByteArray, value: UByte, offset: Int): UByteArray =
-        this.encode64leBu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64leBu(dst: UByteArray, offset: Int, value: UByte): UByteArray =
+        this.encode64leBu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64beBu")
     @JvmStatic
-    fun encode64beBu(dst: ByteArray, value: UByte, offset: Int): ByteArray {
+    fun encode64beBu(dst: ByteArray, offset: Int, value: UByte): ByteArray {
         var offset = offset
         dst[offset] = 0
         dst[++offset] = 0
@@ -922,12 +922,12 @@ object IntSerializers {
 
     @JvmName("encode64beBu\$ua")
     @JvmStatic
-    fun encode64beBu(dst: UByteArray, value: UByte, offset: Int): UByteArray =
-        this.encode64beBu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64beBu(dst: UByteArray, offset: Int, value: UByte): UByteArray =
+        this.encode64beBu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64leH")
     @JvmStatic
-    fun encode64leH(dst: ByteArray, value: Short, offset: Int): ByteArray {
+    fun encode64leH(dst: ByteArray, offset: Int, value: Short): ByteArray {
         var offset = offset
         val sign = (if (value < 0) 0xFF else 0).toByte()
         dst[offset] = value.toByte()
@@ -943,12 +943,12 @@ object IntSerializers {
 
     @JvmName("encode64leH\$ua")
     @JvmStatic
-    fun encode64leH(dst: UByteArray, value: Short, offset: Int): UByteArray =
-        this.encode64leH(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64leH(dst: UByteArray, offset: Int, value: Short): UByteArray =
+        this.encode64leH(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64beH")
     @JvmStatic
-    fun encode64beH(dst: ByteArray, value: Short, offset: Int): ByteArray {
+    fun encode64beH(dst: ByteArray, offset: Int, value: Short): ByteArray {
         var offset = offset
         val sign = (if (value < 0) 0xFF else 0).toByte()
         dst[offset] = sign
@@ -964,12 +964,12 @@ object IntSerializers {
 
     @JvmName("encode64beH\$ua")
     @JvmStatic
-    fun encode64beH(dst: UByteArray, value: Short, offset: Int): UByteArray =
-        this.encode64beH(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64beH(dst: UByteArray, offset: Int, value: Short): UByteArray =
+        this.encode64beH(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64leHu")
     @JvmStatic
-    fun encode64leHu(dst: ByteArray, value: UShort, offset: Int): ByteArray {
+    fun encode64leHu(dst: ByteArray, offset: Int, value: UShort): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value.toShort().toInt() ushr 8).toByte()
@@ -984,12 +984,12 @@ object IntSerializers {
 
     @JvmName("encode64leHu\$ua")
     @JvmStatic
-    fun encode64leHu(dst: UByteArray, value: UShort, offset: Int): UByteArray =
-        this.encode64leHu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64leHu(dst: UByteArray, offset: Int, value: UShort): UByteArray =
+        this.encode64leHu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64beHu")
     @JvmStatic
-    fun encode64beHu(dst: ByteArray, value: UShort, offset: Int): ByteArray {
+    fun encode64beHu(dst: ByteArray, offset: Int, value: UShort): ByteArray {
         var offset = offset
         dst[offset] = 0
         dst[++offset] = 0
@@ -1004,12 +1004,12 @@ object IntSerializers {
 
     @JvmName("encode64beHu\$ua")
     @JvmStatic
-    fun encode64beHu(dst: UByteArray, value: UShort, offset: Int): UByteArray =
-        this.encode64beHu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64beHu(dst: UByteArray, offset: Int, value: UShort): UByteArray =
+        this.encode64beHu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64leI")
     @JvmStatic
-    fun encode64leI(dst: ByteArray, value: Int, offset: Int): ByteArray {
+    fun encode64leI(dst: ByteArray, offset: Int, value: Int): ByteArray {
         var offset = offset
         val sign = (if (value < 0) 0xFF else 0).toByte()
         dst[offset] = value.toByte()
@@ -1025,12 +1025,12 @@ object IntSerializers {
 
     @JvmName("encode64leI\$ua")
     @JvmStatic
-    fun encode64leI(dst: UByteArray, value: Int, offset: Int): UByteArray =
-        this.encode64leI(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64leI(dst: UByteArray, offset: Int, value: Int): UByteArray =
+        this.encode64leI(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64beI")
     @JvmStatic
-    fun encode64beI(dst: ByteArray, value: Int, offset: Int): ByteArray {
+    fun encode64beI(dst: ByteArray, offset: Int, value: Int): ByteArray {
         var offset = offset
         val sign = (if (value < 0) 0xFF else 0).toByte()
         dst[offset] = sign
@@ -1046,12 +1046,12 @@ object IntSerializers {
 
     @JvmName("encode64beI\$ua")
     @JvmStatic
-    fun encode64beI(dst: UByteArray, value: Int, offset: Int): UByteArray =
-        this.encode64beI(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64beI(dst: UByteArray, offset: Int, value: Int): UByteArray =
+        this.encode64beI(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64leIu")
     @JvmStatic
-    fun encode64leIu(dst: ByteArray, value: UInt, offset: Int): ByteArray {
+    fun encode64leIu(dst: ByteArray, offset: Int, value: UInt): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value shr 8).toByte()
@@ -1066,12 +1066,12 @@ object IntSerializers {
 
     @JvmName("encode64leIu\$ua")
     @JvmStatic
-    fun encode64leIu(dst: UByteArray, value: UInt, offset: Int): UByteArray =
-        this.encode64leIu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64leIu(dst: UByteArray, offset: Int, value: UInt): UByteArray =
+        this.encode64leIu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64beIu")
     @JvmStatic
-    fun encode64beIu(dst: ByteArray, value: UInt, offset: Int): ByteArray {
+    fun encode64beIu(dst: ByteArray, offset: Int, value: UInt): ByteArray {
         var offset = offset
         dst[offset] = 0
         dst[++offset] = 0
@@ -1086,12 +1086,12 @@ object IntSerializers {
 
     @JvmName("encode64beIu\$ua")
     @JvmStatic
-    fun encode64beIu(dst: UByteArray, value: UInt, offset: Int): UByteArray =
-        this.encode64beIu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64beIu(dst: UByteArray, offset: Int, value: UInt): UByteArray =
+        this.encode64beIu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64leL")
     @JvmStatic
-    fun encode64leL(dst: ByteArray, value: Long, offset: Int): ByteArray {
+    fun encode64leL(dst: ByteArray, offset: Int, value: Long): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value ushr 8).toByte()
@@ -1106,12 +1106,12 @@ object IntSerializers {
 
     @JvmName("encode64leL\$ua")
     @JvmStatic
-    fun encode64leL(dst: UByteArray, value: Long, offset: Int): UByteArray =
-        this.encode64leL(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64leL(dst: UByteArray, offset: Int, value: Long): UByteArray =
+        this.encode64leL(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64beL")
     @JvmStatic
-    fun encode64beL(dst: ByteArray, value: Long, offset: Int): ByteArray {
+    fun encode64beL(dst: ByteArray, offset: Int, value: Long): ByteArray {
         var offset = offset
         dst[offset] = (value ushr 56).toByte()
         dst[++offset] = (value ushr 48).toByte()
@@ -1126,12 +1126,12 @@ object IntSerializers {
 
     @JvmName("encode64beL\$ua")
     @JvmStatic
-    fun encode64beL(dst: UByteArray, value: Long, offset: Int): UByteArray =
-        this.encode64beL(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64beL(dst: UByteArray, offset: Int, value: Long): UByteArray =
+        this.encode64beL(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64leLu")
     @JvmStatic
-    fun encode64leLu(dst: ByteArray, value: ULong, offset: Int): ByteArray {
+    fun encode64leLu(dst: ByteArray, offset: Int, value: ULong): ByteArray {
         var offset = offset
         dst[offset] = value.toByte()
         dst[++offset] = (value shr 8).toByte()
@@ -1146,12 +1146,12 @@ object IntSerializers {
 
     @JvmName("encode64leLu\$ua")
     @JvmStatic
-    fun encode64leLu(dst: UByteArray, value: ULong, offset: Int): UByteArray =
-        this.encode64leLu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64leLu(dst: UByteArray, offset: Int, value: ULong): UByteArray =
+        this.encode64leLu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("encode64beLu")
     @JvmStatic
-    fun encode64beLu(dst: ByteArray, value: ULong, offset: Int): ByteArray {
+    fun encode64beLu(dst: ByteArray, offset: Int, value: ULong): ByteArray {
         var offset = offset
         dst[offset] = (value shr 56).toByte()
         dst[++offset] = (value shr 48).toByte()
@@ -1166,8 +1166,8 @@ object IntSerializers {
 
     @JvmName("encode64beLu\$ua")
     @JvmStatic
-    fun encode64beLu(dst: UByteArray, value: ULong, offset: Int): UByteArray =
-        this.encode64beLu(dst.asByteArray(), value, offset).asUByteArray()
+    fun encode64beLu(dst: UByteArray, offset: Int, value: ULong): UByteArray =
+        this.encode64beLu(dst.asByteArray(), offset, value).asUByteArray()
 
     @JvmName("decode8B")
     @JvmStatic
