@@ -1,0 +1,101 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../int-serializers/1.0/int-serializers-1.0.module",
+    "group": "ru.landgrafhomyak.utility",
+    "module": "int-serializers",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "macosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "int-serializers.klib",
+          "url": "int-serializers-macosx64-1.0.klib",
+          "size": 61789,
+          "sha512": "59725101f9a06437fd3c064ef0585adf0d747d12084f4db4b312e8b3eb0b35ad95b64bde3c2a259b54857347c5ca1690d7e07f87fda15917d45b4cf5b4d5219e",
+          "sha256": "15865774db8f7779197faf2edd926a0f0356e3ed9662a229b85b2a507d203cbb",
+          "sha1": "678fecbe0b84639f7a229fd9fb688f2a4d4515d1",
+          "md5": "2ec65a0e75bd3461c27c177d032ce6eb"
+        }
+      ]
+    },
+    {
+      "name": "macosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "files": [
+        {
+          "name": "int-serializers-macosx64-1.0-sources.jar",
+          "url": "int-serializers-macosx64-1.0-sources.jar",
+          "size": 4196,
+          "sha512": "91633c3a7ac0fc4716168b064b4ee27396fd6b75be1f34b73781dedb3bb5e1ff8dc9d6a41b69b609d12eb7450b9c896e5b9363774ce45f5e30ebd75532198596",
+          "sha256": "97ea4689ae0cbd710d59dacf91b11601179369dff7e7fe309a3389f79a968914",
+          "sha1": "39441f27e396bd87f7798b97e6610b633b578a8c",
+          "md5": "e295a51bbdaadb8f09215dc74e57cad3"
+        }
+      ]
+    },
+    {
+      "name": "macosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "int-serializers-macosx64-1.0-metadata.jar",
+          "url": "int-serializers-macosx64-1.0-metadata.jar",
+          "size": 261,
+          "sha512": "7ff9af8287fee965771a6ca2ac88063dcac13215ed5065c23c793cc433a107f11d189f9e92e26dc8263a6043fbfc90fa56405efa975eb9ae2c8b8291ecfbd791",
+          "sha256": "88e501e4ba70b480f64dcb6d6d823668e81ea065abd49fb33ba976272e115389",
+          "sha1": "633e7ae9f34a99942673c1ae3f7cad0dbaa85a7d",
+          "md5": "83a7d6f7fed74b7730ceccf4ae1ad9a5"
+        }
+      ]
+    }
+  ]
+}

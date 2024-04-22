@@ -1,0 +1,101 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../int-serializers/1.0/int-serializers-1.0.module",
+    "group": "ru.landgrafhomyak.utility",
+    "module": "int-serializers",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "int-serializers.klib",
+          "url": "int-serializers-iosarm64-1.0.klib",
+          "size": 61788,
+          "sha512": "06963ba775ed76268f3dbeb2278e7a33bb6056e2ad73a8256cfed9a5dd17f7717489f554aa36ef699793952f0f6488e6b374503ee74ba479e39c68eb94fa782f",
+          "sha256": "337c2a39b92624345861400916cfdc2ea8aadfe92ca543334d411f7b1a720f1c",
+          "sha1": "6cbaaaaecf9717b46d59f09491e568685a337ed1",
+          "md5": "e7f3c908553d8349478bca74cd8f39c0"
+        }
+      ]
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "files": [
+        {
+          "name": "int-serializers-iosarm64-1.0-sources.jar",
+          "url": "int-serializers-iosarm64-1.0-sources.jar",
+          "size": 4196,
+          "sha512": "91633c3a7ac0fc4716168b064b4ee27396fd6b75be1f34b73781dedb3bb5e1ff8dc9d6a41b69b609d12eb7450b9c896e5b9363774ce45f5e30ebd75532198596",
+          "sha256": "97ea4689ae0cbd710d59dacf91b11601179369dff7e7fe309a3389f79a968914",
+          "sha1": "39441f27e396bd87f7798b97e6610b633b578a8c",
+          "md5": "e295a51bbdaadb8f09215dc74e57cad3"
+        }
+      ]
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "int-serializers-iosarm64-1.0-metadata.jar",
+          "url": "int-serializers-iosarm64-1.0-metadata.jar",
+          "size": 261,
+          "sha512": "43f1c208617d94fe2fd3c5f02afdb5e77d436026e903a0bc9638a057960513492273b9508733f9ccd9e32e99d03aefda802e31380c5f86e69ed20abd7356a212",
+          "sha256": "063caa65c6a299a8cc0712fc4ca62674e7148c5c31bb037fbeee2254663027dd",
+          "sha1": "61cf5c37e3cdfc588070181717f123591d6a9185",
+          "md5": "77878b347b88e93e746697b6915f93e6"
+        }
+      ]
+    }
+  ]
+}

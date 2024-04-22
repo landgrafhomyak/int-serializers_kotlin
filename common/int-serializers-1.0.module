@@ -1,0 +1,882 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "ru.landgrafhomyak.utility",
+    "module": "int-serializers",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "int-serializers-metadata-1.0.jar",
+          "url": "int-serializers-1.0.jar",
+          "size": 5924,
+          "sha512": "6961ac9cca7d618224c393dce33a75ac46f8f56d3abd05cc9dd8c6d42abd5b533dff5734ead3e768b1f461f5923f2b90f4d5feea3a4abb0850955837c6acf310",
+          "sha256": "3bfcf2a8d2ce2404ae4c873d184d6a5e2690552a9817d91d3762b9c5b8ccddcf",
+          "sha1": "72034e557c89ae128d642ffa7a68d3135c755067",
+          "md5": "a0c427516a3e258c216f10355e7f4091"
+        }
+      ]
+    },
+    {
+      "name": "metadataSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "int-serializers-kotlin-1.0-sources.jar",
+          "url": "int-serializers-1.0-sources.jar",
+          "size": 4196,
+          "sha512": "91633c3a7ac0fc4716168b064b4ee27396fd6b75be1f34b73781dedb3bb5e1ff8dc9d6a41b69b609d12eb7450b9c896e5b9363774ce45f5e30ebd75532198596",
+          "sha256": "97ea4689ae0cbd710d59dacf91b11601179369dff7e7fe309a3389f79a968914",
+          "sha1": "39441f27e396bd87f7798b97e6610b633b578a8c",
+          "md5": "e295a51bbdaadb8f09215dc74e57cad3"
+        }
+      ]
+    },
+    {
+      "name": "androidNativeArm32ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "android_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-androidnativearm32/1.0/int-serializers-androidnativearm32-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-androidnativearm32",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "androidNativeArm32SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "android_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-androidnativearm32/1.0/int-serializers-androidnativearm32-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-androidnativearm32",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "androidNativeArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "android_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-androidnativearm64/1.0/int-serializers-androidnativearm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-androidnativearm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "androidNativeArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "android_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-androidnativearm64/1.0/int-serializers-androidnativearm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-androidnativearm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "androidNativeX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "android_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-androidnativex64/1.0/int-serializers-androidnativex64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-androidnativex64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "androidNativeX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "android_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-androidnativex64/1.0/int-serializers-androidnativex64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-androidnativex64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "androidNativeX86ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "android_x86",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-androidnativex86/1.0/int-serializers-androidnativex86-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-androidnativex86",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "androidNativeX86SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "android_x86",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-androidnativex86/1.0/int-serializers-androidnativex86-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-androidnativex86",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-iosarm64/1.0/int-serializers-iosarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-iosarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-iosarm64/1.0/int-serializers-iosarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-iosarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-iosarm64/1.0/int-serializers-iosarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-iosarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-iossimulatorarm64/1.0/int-serializers-iossimulatorarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-iossimulatorarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-iossimulatorarm64/1.0/int-serializers-iossimulatorarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-iossimulatorarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-iossimulatorarm64/1.0/int-serializers-iossimulatorarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-iossimulatorarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "iosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-iosx64/1.0/int-serializers-iosx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-iosx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "iosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-iosx64/1.0/int-serializers-iosx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-iosx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "iosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-iosx64/1.0/int-serializers-iosx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-iosx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "jsApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../int-serializers-js/1.0/int-serializers-js-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-js",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "jsRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../int-serializers-js/1.0/int-serializers-js-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-js",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "jsSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../int-serializers-js/1.0/int-serializers-js-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-js",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../int-serializers-jvm/1.0/int-serializers-jvm-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-jvm",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../int-serializers-jvm/1.0/int-serializers-jvm-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-jvm",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../int-serializers-jvm/1.0/int-serializers-jvm-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-jvm",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "linuxArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "linux_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-linuxarm64/1.0/int-serializers-linuxarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-linuxarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "linuxArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "linux_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-linuxarm64/1.0/int-serializers-linuxarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-linuxarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "linuxX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-linuxx64/1.0/int-serializers-linuxx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-linuxx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "linuxX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-linuxx64/1.0/int-serializers-linuxx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-linuxx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "macosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-macosarm64/1.0/int-serializers-macosarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-macosarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "macosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-macosarm64/1.0/int-serializers-macosarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-macosarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "macosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-macosarm64/1.0/int-serializers-macosarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-macosarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "macosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-macosx64/1.0/int-serializers-macosx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-macosx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "macosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-macosx64/1.0/int-serializers-macosx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-macosx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "macosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-macosx64/1.0/int-serializers-macosx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-macosx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "mingwX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "mingw_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-mingwx64/1.0/int-serializers-mingwx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-mingwx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "mingwX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "mingw_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-mingwx64/1.0/int-serializers-mingwx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-mingwx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "tvosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-tvosarm64/1.0/int-serializers-tvosarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-tvosarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "tvosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "tvos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-tvosarm64/1.0/int-serializers-tvosarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-tvosarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "tvosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-tvosarm64/1.0/int-serializers-tvosarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-tvosarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "tvosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-tvosx64/1.0/int-serializers-tvosx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-tvosx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "tvosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-tvosx64/1.0/int-serializers-tvosx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-tvosx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "tvosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-tvosx64/1.0/int-serializers-tvosx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-tvosx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "watchosArm32ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-watchosarm32/1.0/int-serializers-watchosarm32-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-watchosarm32",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "watchosArm32SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "watchos_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-watchosarm32/1.0/int-serializers-watchosarm32-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-watchosarm32",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "watchosArm32MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_arm32",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-watchosarm32/1.0/int-serializers-watchosarm32-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-watchosarm32",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "watchosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-watchosarm64/1.0/int-serializers-watchosarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-watchosarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "watchosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "watchos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-watchosarm64/1.0/int-serializers-watchosarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-watchosarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "watchosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-watchosarm64/1.0/int-serializers-watchosarm64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-watchosarm64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "watchosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-watchosx64/1.0/int-serializers-watchosx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-watchosx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "watchosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "watchos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-watchosx64/1.0/int-serializers-watchosx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-watchosx64",
+        "version": "1.0"
+      }
+    },
+    {
+      "name": "watchosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../int-serializers-watchosx64/1.0/int-serializers-watchosx64-1.0.module",
+        "group": "ru.landgrafhomyak.utility",
+        "module": "int-serializers-watchosx64",
+        "version": "1.0"
+      }
+    }
+  ]
+}

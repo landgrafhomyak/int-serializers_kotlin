@@ -1,0 +1,71 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../int-serializers/1.0/int-serializers-1.0.module",
+    "group": "ru.landgrafhomyak.utility",
+    "module": "int-serializers",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "androidNativeArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "android_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "int-serializers.klib",
+          "url": "int-serializers-androidnativearm64-1.0.klib",
+          "size": 61823,
+          "sha512": "10173bc77e7e92ebe7f5a8c31d934e36676d2d13bd5c5e6ab3b30700293aa0088516745d530e5d0d74068cacceaac1d28db6e741d262ea1e497549909ad799d8",
+          "sha256": "038d53e583c8ebbc2d5adef99b4ed7bf7f20a3f893db0795adeb94641d59ac9f",
+          "sha1": "02b218b62f51a0c292215200d6b0c83c9e9df1da",
+          "md5": "687dbf9e4ec9f7443f849a049b697d92"
+        }
+      ]
+    },
+    {
+      "name": "androidNativeArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "android_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "files": [
+        {
+          "name": "int-serializers-androidnativearm64-1.0-sources.jar",
+          "url": "int-serializers-androidnativearm64-1.0-sources.jar",
+          "size": 4196,
+          "sha512": "91633c3a7ac0fc4716168b064b4ee27396fd6b75be1f34b73781dedb3bb5e1ff8dc9d6a41b69b609d12eb7450b9c896e5b9363774ce45f5e30ebd75532198596",
+          "sha256": "97ea4689ae0cbd710d59dacf91b11601179369dff7e7fe309a3389f79a968914",
+          "sha1": "39441f27e396bd87f7798b97e6610b633b578a8c",
+          "md5": "e295a51bbdaadb8f09215dc74e57cad3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../int-serializers/1.0/int-serializers-1.0.module",
+    "group": "ru.landgrafhomyak.utility",
+    "module": "int-serializers",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "watchosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "watchos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "int-serializers.klib",
+          "url": "int-serializers-watchosarm64-1.0.klib",
+          "size": 61823,
+          "sha512": "35d76204656f60e609d9dfd05464519806d1a523ba5e5f8e121c36429e60ecd1fc863a501f31269959246cb1ba0817832d78b500bef14dde6a10dcbc3e49f35f",
+          "sha256": "19a27743f718e289a7b3de16bcd6422ff4c953e4b3149d28e34a93ca660f70e4",
+          "sha1": "9efe2419253be8186e264db3ec03e49f629f1f5f",
+          "md5": "dde8ba5ebe8686ab6623a47d81da790e"
+        }
+      ]
+    },
+    {
+      "name": "watchosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "watchos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "files": [
+        {
+          "name": "int-serializers-watchosarm64-1.0-sources.jar",
+          "url": "int-serializers-watchosarm64-1.0-sources.jar",
+          "size": 4196,
+          "sha512": "91633c3a7ac0fc4716168b064b4ee27396fd6b75be1f34b73781dedb3bb5e1ff8dc9d6a41b69b609d12eb7450b9c896e5b9363774ce45f5e30ebd75532198596",
+          "sha256": "97ea4689ae0cbd710d59dacf91b11601179369dff7e7fe309a3389f79a968914",
+          "sha1": "39441f27e396bd87f7798b97e6610b633b578a8c",
+          "md5": "e295a51bbdaadb8f09215dc74e57cad3"
+        }
+      ]
+    },
+    {
+      "name": "watchosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "watchos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "int-serializers-watchosarm64-1.0-metadata.jar",
+          "url": "int-serializers-watchosarm64-1.0-metadata.jar",
+          "size": 261,
+          "sha512": "a5237022203f13dd5370d22233e56f842ecb4e3cb4efb07227bfdfceb6727431e89b6dc0609e47f58f5042f3be9d57c64aafd01ad275208fc9576fd201b2c486",
+          "sha256": "1f9ba997c5a8a0a0489fbbdd543d68b50ae19c5043e7f4b2fc68a82e869284a8",
+          "sha1": "c4292b0810c30f42c292fbf4afb636afc1024e75",
+          "md5": "36bf069eba48d48b8b3b1cf429ea024b"
+        }
+      ]
+    }
+  ]
+}
